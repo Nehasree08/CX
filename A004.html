@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let x=t1.value;
+            let y=t2.value;
+
+            submit.innerHTML= x*y ;
+        }
+        function stringLen(){
+
+            let inputString = document.getElementById("s1").value;
+            let length = inputString.length;
+
+            // Display the length in the button
+            document.getElementById("string").innerHTML = length;
+        }
+        function evenOdd() {
+            let num = document.getElementById("num").value;
+            let result = document.getElementById("result");
+            if (num % 2 == 0) {
+                result.style.backgroundColor = "green";
+                result.innerHTML = "Even";
+            } else {
+                result.style.backgroundColor = "red";
+                result.innerHTML = "Odd";
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="rect">
+        <fieldset>
+        <legend>Area of a rectangle</legend>
+        <p><input type="text" id="t1"></p>
+        <p><input type="text" id="t2"></p>
+        <button  onclick="f1()">Submit</button>
+        <p><label id="submit"></label></p>
+        </fieldset>
+    </div>
+
+
+    
+
+    <div>
+    <fieldset>
+        <legend>String length</legend>
+        <p><input type="text" id="s1" placeholder="enter string"></p>
+        <button  onclick="stringLen()">Length</button>
+        <p><label id="string"></label></p>
+    </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
+            <legend>EvenOdd</legend>
+            <p><input type="text" id="num" placeholder="Enter number"></p>
+            <button  id="result" onclick="evenOdd()">Submit</button>
+            
+        </fieldset>
+        </div>
+</body>
+</html>
